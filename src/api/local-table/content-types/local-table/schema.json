@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "local_tables",
+  "info": {
+    "singularName": "local-table",
+    "pluralName": "local-tables",
+    "displayName": "Local Table",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "database_name": {
+      "type": "string"
+    },
+    "local_table_columns": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::local-table-column.local-table-column",
+      "mappedBy": "local_table"
+    }
+  }
+}
